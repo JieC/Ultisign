@@ -11,7 +11,7 @@
     "flyertea":{
         "login": {"username": "uid", "password": "pwd"},
         "base_url": "http://www.flyertea.com/",
-        "login_page": "",
+        "login_page": [""],
         "login_extractor": "",
         "extractor_key": "",
         "login_url": "member.php?mod=logging&action=login&loginsubmit=yes&mobile=2",
@@ -24,7 +24,7 @@
     "zimuzu": {
         "login": {"account":"uid", "password":"pwd"},
         "base_url": "http://www.zimuzu.tv/",
-        "login_page": "user/login",
+        "login_page": ["?security_verify_data=313532352c383538", "?security_verify_data=313532352c383538"],
         "login_extractor": "",
         "extractor_key": "",
         "login_url": "User/Login/ajaxLogin",
@@ -37,7 +37,7 @@
     "koolshare": {
         "login": {"username":"uid", "password":"pwd"},
         "base_url": "http://koolshare.cn/",
-        "login_page": "",
+        "login_page": [""],
         "login_extractor": "",
         "extractor_key": "",
         "login_url": "member.php?mod=logging&action=login&loginsubmit=yes&mobile=yes",
@@ -50,7 +50,7 @@
     "smzdm": {
         "login": {"username":"uid", "password":"pwd"},
         "base_url": "http://zhiyou.smzdm.com/",
-        "login_page": "",
+        "login_page": [""],
         "login_extractor": "",
         "extractor_key": "",
         "login_url": "user/login/ajax_check",
@@ -63,7 +63,7 @@
     "mgpyh": {
         "login": {"email":"uid", "password":"pwd"},
         "base_url": "http://www.mgpyh.com/",
-        "login_page": "accounts/login/",
+        "login_page": ["accounts/login/"],
         "login_extractor": "value='(.+?)'",
         "extractor_key": "csrfmiddlewaretoken",
         "login_url": "accounts/login/?share=",

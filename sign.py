@@ -38,19 +38,20 @@ class Sign:
 
     def do_login(self):
         extract = ''
-        if self.login_page:
-            login_page_r = self.session.get(self.base_url + self.login_page)
-            if self.login_extractor:
-                login_extract = re.search(
-                    self.login_extractor,
-                    login_page_r.text)
-                if login_extract:
-                    extract = login_extract.group(1)
-                    if self.extractor_key:
-                        self.login[self.extractor_key] = extract
-                else:
-                    logger.error('Not able to find login extract')
-                    return
+        if self.login_page[0]:
+            for l in self.login_page:
+                login_page_r = self.session.get(self.base_url + l)
+                if self.login_extractor:
+                    login_extract = re.search(
+                        self.login_extractor,
+                        login_page_r.text)
+                    if login_extract:
+                        extract = login_extract.group(1)
+                        if self.extractor_key:
+                            self.login[self.extractor_key] = extract
+                    else:
+                        logger.error('Not able to find login extract')
+                        return
         login = self.session.post(
             self.base_url + self.login_url.format(extract=extract),
             data=self.login)
