@@ -7,7 +7,6 @@
     ],
     "inactive":[
         "flyertea"
-
     ],
     "flyertea":{
         "login": {"username": "uid", "password": "pwd"},
