@@ -61,7 +61,7 @@ class Sign:
             else:
                 logger.info(self.site + ':Login Successful')
         else:
-            logger.error('Login Failed')
+            logger.error(self.site + ':Login Failed')
             logger.debug(login.text)
 
     def do_sign(self):
@@ -88,7 +88,7 @@ class Sign:
         if self.sign_success[0] in getattr(sign, self.sign_success[1]):
             logger.info(self.site + ':Sign Successful')
         else:
-            logger.error('Sign Failed')
+            logger.error(self.site + ':Sign Failed')
             logger.debug(sign.text)
 
 
