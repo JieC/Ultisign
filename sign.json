@@ -1,12 +1,13 @@
 {
     "active":[
-        "flyertea",
         "koolshare",
         "smzdm",
         "mgpyh",
         "zimuzu"
     ],
     "inactive":[
+        "flyertea"
+
     ],
     "flyertea":{
         "login": {"username": "uid", "password": "pwd"},
@@ -61,13 +62,13 @@
         "sign_success": ["error_code\":0", "text"]
     },
     "mgpyh": {
-        "login": {"email":"uid", "password":"pwd"},
+        "login": "{\"email\":\"uid\", \"password\":\"pwd\"}",
         "base_url": "http://www.mgpyh.com/",
-        "login_page": ["accounts/login/"],
-        "login_extractor": "value='(.+?)'",
-        "extractor_key": "csrfmiddlewaretoken",
-        "login_url": "accounts/login/?share=",
-        "login_success": ["首页", "text"],
+        "login_page": [""],
+        "login_extractor": "",
+        "extractor_key": "",
+        "login_url": "api/v3/user/login/",
+        "login_success": ["success\": true", "text"],
         "sign_page": "",
         "sign_extractor": "",
         "sign_url": "checkin/",
